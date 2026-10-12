@@ -1,0 +1,108 @@
+:root {
+    --bg-color: #0B1120;
+    --container-color: #151E32;
+    --text-color: #F1F5F9;
+    --input-bg: #1E293B;
+    --input-border: #334155;
+    --primary-color: #3B82F6;
+    --primary-hover: #2563EB;
+    --disabled-bg: #475569;
+    --disabled-text: #CBD5E1;
+}
+
+.dark-theme {
+    --bg-color: #111827;
+    --container-color: #1f2937;
+    --text-color: #f9fafb;
+    --input-bg: #374151;
+    --input-border: #4b5563;
+    --primary-color: #3b82f6;
+    --primary-hover: #60a5fa;
+    --disabled-bg: #4b5563;
+    --disabled-text: #9ca3af;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--container-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 1px;
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: #ef4444;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--primary-hover);
+}
+
+button:disabled {
+    background-color: var(--disabled-bg);
+    color: var(--disabled-text);
+    cursor: not-allowed;
+    opacity: 0.7;
+}

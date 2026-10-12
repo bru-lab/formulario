@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <form id="formCadastro">
+            <h1>Criar conta</h1>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(11) 99999-9999"
+                    pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                    title="Digite o telefone no formato (11) 99999-9999"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    minlength="6"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="confirmarSenha">Confirmar senha</label>
+                <input
+                    type="password"
+                    id="confirmarSenha"
+                    name="confirmarSenha"
+                    placeholder="Digite sua senha novamente"
+                    minlength="6"
+                    required
+                >
+                <small id="mensagemSenha"></small>
+            </div>
+
+            <button type="submit" id="btnCadastrar" disabled>
+                Criar conta
+            </button>
+
+        </form>
+    </main>
+
+</body>
+</html>
